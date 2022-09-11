@@ -9,7 +9,7 @@
  * @param {NodeToAppendElementTo=} appendToEl
  * @returns {T extends HTMLElementTagName ? HTMLElementTagNameMap[T] : HTMLElementTagNameMap['div']}
  */
-export function createElement<T extends Falsy | keyof HTMLElementTagNameMap = "div", NodeToAppendElementTo extends Node = undefined>(className?: string | undefined, tagName?: T, appendToEl?: NodeToAppendElementTo): T extends keyof HTMLElementTagNameMap ? HTMLElementTagNameMap[T] : HTMLDivElement;
+export function createElement<T extends Falsy | keyof HTMLElementTagNameMap = "div", NodeToAppendElementTo extends Node | undefined= undefined>(className?: string | undefined, tagName?: T, appendToEl?: NodeToAppendElementTo): T extends keyof HTMLElementTagNameMap ? HTMLElementTagNameMap[T] : HTMLDivElement;
 /**
  * @param {Point} p1
  * @param {Point} p2
